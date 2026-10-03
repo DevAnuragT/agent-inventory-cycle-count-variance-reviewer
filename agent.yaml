@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: inventory-cycle-count-variance-reviewer
+version: 0.1.0
+description: Compare expected and counted quantities and require variance explanation.
+skills:
+  - inventory-cycle-count-variance-reviewer-skill
+tools:
+  - review-inventory-cycle-count-variance-reviewer
+tags:
+  - supply-chain
+  - evidence-driven

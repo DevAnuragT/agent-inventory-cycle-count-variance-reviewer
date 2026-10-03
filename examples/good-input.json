@@ -1,0 +1,6 @@
+{
+  "sku": "evidence-record",
+  "expected_quantity": 1,
+  "counted_quantity": 1,
+  "variance_reason": "Documented evidence and reviewer notes. "
+}

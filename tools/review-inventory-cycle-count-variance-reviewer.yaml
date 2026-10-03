@@ -1,0 +1,59 @@
+{
+  "name": "review-inventory-cycle-count-variance-reviewer",
+  "description": "Run Inventory Cycle Count Variance Reviewer",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "sku": {
+            "type": "string",
+            "description": "sku"
+          },
+          "expected_quantity": {
+            "type": "number",
+            "description": "expected quantity"
+          },
+          "counted_quantity": {
+            "type": "number",
+            "description": "counted quantity"
+          },
+          "variance_reason": {
+            "type": "string",
+            "description": "variance reason"
+          }
+        },
+        "required": [
+          "sku",
+          "expected_quantity",
+          "counted_quantity",
+          "variance_reason"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-inventory-cycle-count-variance-reviewer.py",
+    "runtime": "python3"
+  }
+}
